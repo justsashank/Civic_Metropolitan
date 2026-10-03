@@ -2,321 +2,47 @@
 
 ### Report it. Route it. Resolve it.
 
-**CivicAI** is a MERN-stack civic issue reporting platform that makes it easier for citizens to report problems in their communities and helps authorities manage them efficiently.
+**CivicAI** is a smart civic issue reporting platform designed to make reporting and managing local community problems simpler and more efficient.
 
-Users can report issues such as **potholes, broken streetlights, garbage, water leaks, drainage problems, traffic issues, and public safety concerns**. AI analyzes the submitted complaint, identifies its category and priority, and helps route it to the appropriate department.
+Citizens can report issues such as potholes, broken streetlights, garbage, water leaks, drainage problems, and other civic concerns. The platform uses AI to help understand the reported issue, determine its urgency, and route it toward the appropriate department.
 
-Citizens can then track the progress of their complaints, while administrators can manage, assign, and update reported issues through a centralized dashboard.
+Users can also track the progress of their reports, while administrators can manage reported issues through a centralized interface.
 
----
+## ✨ Key Features
 
-## 💡 How It Works
+* 📝 Simple civic issue reporting
+* 🤖 AI-assisted issue classification and prioritization
+* 📍 Location-based issue reporting
+* 🗺️ Interactive issue visualization
+* 🔎 Complaint tracking
+* 🛠️ Administrative issue management
+* 📊 Civic issue insights and statistics
 
-```text
-Citizen reports an issue
-          ↓
-      AI analyzes it
-          ↓
-Identifies category & priority
-          ↓
-Routes it to the right department
-          ↓
-Department manages the issue
-          ↓
-Citizen tracks the progress
-          ↓
-        Issue resolved
-```
+## 🛠️ Built With
 
-### Example
+**MERN Stack**
 
-A citizen reports:
-
-> **"There is a large pothole near the college road that is dangerous for two-wheelers."**
-
-CivicAI can identify:
-
-* **Category:** Roads
-* **Priority:** High
-* **Department:** Roads & Highways
-* **AI Confidence:** 94%
-
-The complaint is then assigned to the appropriate department and the citizen can track its status.
-
----
-
-## ✨ Features
-
-### 👤 Citizen Features
-
-* Create an account and log in
-* Report civic issues
-* Add descriptions and locations
-* Upload issue images
-* AI-powered issue analysis
-* Receive a unique complaint ID
-* Track complaint status
-* View status history
-* View reported issues on a map
-* Monitor resolved and active complaints
-
-### 🤖 AI-Powered Triage
-
-CivicAI uses AI to analyze submitted complaints and help determine:
-
-* Issue category
-* Priority level
-* Appropriate department
-* Complaint summary
-* AI confidence score
-* Reasoning behind the classification
-* Potential duplicate reports
-
-### 🛠️ Admin Features
-
-* Admin authentication
-* View all reported issues
-* Filter and manage complaints
-* Assign issues to departments
-* Change issue status
-* View priority queue
-* Monitor department workload
-* View issue statistics
-* Manage departments
-* Track issue history
-
-### 🗺️ Issue Map
-
-Reported issues can be displayed geographically using an interactive map, allowing administrators and citizens to understand where civic problems are concentrated.
-
----
-
-## 🧑‍💻 Tech Stack
-
-### Frontend
-
-* React.js
-* Vite
-* Tailwind CSS
-* React Router
-* Axios
-* Leaflet
-* React Leaflet
-* Recharts
-* Lucide React
-
-### Backend
-
-* Node.js
-* Express.js
 * MongoDB
-* Mongoose
-* JWT Authentication
-* bcryptjs
-* Multer
-* Zod
-* Helmet
-* Morgan
-* Express Rate Limit
+* Express.js
+* React.js
+* Node.js
 
-### AI
+Additional technologies include AI services, mapping, authentication, and data visualization tools.
 
-* Google Gemini API
-* AI-powered issue classification and prioritization
-* Duplicate issue detection
+## 🎯 Goal
 
----
+CivicAI aims to bridge the gap between **citizens and civic authorities** by making issue reporting more accessible, organized, and transparent.
 
-## 📁 Project Structure
+> **Report it. Route it. Resolve it.**
 
-```text
-CivicAI-MERN/
-│
-├── client/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── context/
-│   │   └── App.jsx
-│   │
-│   └── package.json
-│
-├── server/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   ├── services/
-│   ├── uploads/
-│   └── server.js
-│
-├── .env.example
-├── package.json
-└── README.md
-```
+## 🚧 Project Status
 
----
+**In Development**
 
-## 🚀 Getting Started
+This project is being developed as a full-stack academic and portfolio project, with further features and improvements planned.
 
-### 1. Clone the repository
+## 👨‍💻 Author
 
-```bash
-git clone <your-repository-url>
-cd CivicAI-MERN
-```
+**Sashank**
 
-### 2. Install dependencies
-
-Install the root dependencies:
-
-```bash
-npm install
-```
-
-Install frontend dependencies:
-
-```bash
-cd client
-npm install
-```
-
-Install backend dependencies:
-
-```bash
-cd ../server
-npm install
-```
-
----
-
-## ⚙️ Environment Variables
-
-Create a `.env` file inside the `server` directory.
-
-```env
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-GEMINI_API_KEY=your_gemini_api_key
-PORT=5000
-CLIENT_URL=http://localhost:5173
-```
-
-> Never commit your `.env` file or API keys to GitHub.
-
----
-
-## ▶️ Run the Project
-
-From the root directory:
-
-```bash
-npm run dev
-```
-
-The application will run on:
-
-```text
-Frontend → http://localhost:5173
-Backend  → http://localhost:5000
-```
-
----
-
-## 🔐 Demo Accounts
-
-### Admin
-
-```text
-Email: admin@civicai.demo
-Password: Admin@123
-```
-
-### Citizen
-
-```text
-Email: citizen@civicai.demo
-Password: Citizen@123
-```
-
-> Change these credentials before deploying the application publicly.
-
----
-
-## 📊 Issue Lifecycle
-
-Every reported issue follows a structured workflow:
-
-```text
-Reported
-   ↓
-AI Triaged
-   ↓
-Assigned
-   ↓
-In Progress
-   ↓
-Resolved
-```
-
-Administrators can also reject invalid or inappropriate reports.
-
----
-
-## 🧠 Example AI Response
-
-```json
-{
-  "category": "Roads",
-  "priority": "High",
-  "department": "Roads & Highways",
-  "confidence": 0.94,
-  "summary": "Large pothole creating a road safety hazard.",
-  "reasoning": "The report describes significant road damage that could endanger road users."
-}
-```
-
----
-
-## 🎯 Why CivicAI?
-
-Traditional complaint systems can make it difficult for citizens to know:
-
-* Where to report a problem
-* Which department handles it
-* How urgent the issue is
-* What is happening after submitting a complaint
-
-CivicAI aims to simplify this process by bringing **citizen reporting, AI-based triage, department management, and complaint tracking into one platform.**
-
----
-
-## 🔮 Future Improvements
-
-* 📱 Mobile application
-* 📍 Automatic GPS-based location detection
-* 📸 Computer vision for image-based issue detection
-* 🔔 Email/SMS notifications
-* 🧠 Improved duplicate detection
-* 📈 Advanced civic analytics
-* 🏛️ Integration with real government complaint systems
-* 🌐 Multi-language support
-* 🗺️ Heatmaps for high-frequency civic issues
-* 📊 Predictive analysis for recurring problems
-
----
-
-## 👨‍💻 Project
-
-**CivicAI — AI-Powered Civic Issue Reporting Platform**
-
-Built as a full-stack **MERN project** with AI-assisted issue triage.
-
-**MERN:** MongoDB · Express.js · React.js · Node.js
-
----
-
-### 📄 License
-
-This project is developed for educational and demonstration purposes.
+Built with curiosity, code, and a lot of debugging. :)
